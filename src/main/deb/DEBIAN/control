@@ -1,0 +1,8 @@
+Package: daisy-pipeline2-webui-sbs-theme
+Version: ${project.detailedVersion}
+Section: text
+Priority: optional
+Architecture: all
+Maintainer: Bert Frees <bert.frees@sbs.ch>
+Description: SBS branding for DAISY Pipeline 2 Web UI
+Homepage: https://github.com/sbsdev/pipeline-webui-theme

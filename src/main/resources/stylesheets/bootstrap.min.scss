@@ -1,0 +1,91 @@
+/* Default theme */
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
+
+$sbs-blue: lighten(#1a5b7d, 3%);
+$sbs-yellow: #fcd54b;
+$logo-height: 50px;
+$logo-margin: 20px;
+
+.navbar-fixed-top {
+  $padding: 30px;
+  padding-left: $padding;
+  padding-right: $padding;
+  padding-top: $logo-height + 2 * $logo-margin;
+  a.sbs-logo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    text-indent: -9999px;
+    height: $logo-height;
+    width: 100%;
+    padding: $logo-margin ($padding + $logo-margin);
+    background-color: white;
+    background-image: url('../images/SBS-Logo.jpg');
+    background-repeat: no-repeat;
+    background-size: auto $logo-height;
+    background-position: ($padding + $logo-margin) $logo-margin; }
+  .navbar-inner {
+    background-image: none;
+    background-color: $sbs-blue; 
+    border-color: $sbs-blue;
+    border-bottom: 6px solid darken(#cfcfcf, 4%); }
+  .brand {
+    color: white; }
+  .divider-vertical {
+    background-color: $sbs-blue;
+    border-right: 1px solid $sbs-blue; }
+  .nav > li {
+    > a {
+      color: white; }
+    &.active > a {
+      &, &:hover, &:focus {
+        color: white;
+        background-color: lighten($sbs-blue, 7%); }}}}
+
+h1 {
+  padding-bottom: 10px;
+  border-bottom: 6px solid #cfcfcf; }
+
+a {
+  color: $sbs-blue; }
+
+.btn {
+  $button-radius: 14px;
+  border-bottom-left-radius: $button-radius;
+  border-bottom-right-radius: $button-radius;
+  border-top-left-radius: $button-radius;
+  border-top-right-radius: $button-radius;
+  &.btn-success, &.btn-primary {
+    color: black;
+    text-shadow: none;
+    background-color: darken($sbs-yellow, 5%);
+    background-image: none;
+    &:hover, &:focus, &:active, &.active {
+      color: black;
+      text-shadow: none;
+      background-color: darken($sbs-yellow, 13%);
+      background-image: none; }
+    > i.icon-white {
+      background-image: url("http://twitter.github.com/bootstrap/assets/img/glyphicons-halflings.png"); }}}
+
+.nav-pills > li {
+  > a {
+    color: black; }
+  &.active > a {
+    color: black;
+    background-color: darken($sbs-yellow, 5%);
+    &:hover, &:focus {
+      color: black;
+      background-color: darken($sbs-yellow, 13%); }}}
+
+.well {
+  background-color: lighten($sbs-yellow, 23%); }
+
+/* Override main.min.css */
+
+body {
+  padding-top: 60px + $logo-height + 2 * $logo-margin !important; }
+
+.ui-widget-content a {
+  color: $sbs-blue !important; }
