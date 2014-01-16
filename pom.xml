@@ -49,7 +49,7 @@
               </includes>
               <mapper>
                 <type>perm</type>
-                <prefix>/opt/pipeline2/daisy-pipeline-webui/themes/SBS</prefix>
+                <prefix>/opt/daisy-pipeline2/webui/themes/SBS</prefix>
               </mapper>
             </data>
             <data>
@@ -60,7 +60,7 @@
               </includes>
               <mapper>
                 <type>perm</type>
-                <prefix>/opt/pipeline2/daisy-pipeline-webui/themes/SBS</prefix>
+                <prefix>/opt/daisy-pipeline2/webui/themes/SBS</prefix>
               </mapper>
             </data>
           </dataSet>
