@@ -36,6 +36,41 @@
         </executions>
       </plugin>
       <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>process-test-resources</id>
+            <phase>process-test-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>target/test</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>src/test/resources</directory>
+                </resource>
+                <resource>
+                  <directory>src/main/resources</directory>
+                  <includes>
+                    <include>images/*</include>
+                    <include>javascripts/*.js</include>
+                  </includes>
+                  <targetPath>theme</targetPath>
+                </resource>
+                <resource>
+                  <directory>target/generated-resources</directory>
+                  <includes>
+                    <include>stylesheets/*.css</include>
+                  </includes>
+                  <targetPath>theme</targetPath>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.vafer</groupId>
         <artifactId>jdeb</artifactId>
         <configuration>
@@ -45,7 +80,7 @@
               <src>src/main/resources</src>
               <includes>
                 images/*,
-                javascripts/*
+                javascripts/*.js
               </includes>
               <mapper>
                 <type>perm</type>
